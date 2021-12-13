@@ -9,4 +9,4 @@
  
  Promo Code: Promo10 can be used at checkout for 10% off <br/>
  
- link (https://stephenmeehan1996.github.io/Webframe_Yr2_sem1_WebDesign_Project/index.html)
+ link https://stephenmeehan1996.github.io/Webframe_Yr2_sem1_WebDesign_Project/index.html
