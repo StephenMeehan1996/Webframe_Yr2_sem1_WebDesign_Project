@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WebFrame is a web and software design company based in the west of Ireland, using up to date industry standards and with a mobile first design philosophy we are are one stop shop for all your design needs">
+    <meta name="keywords" content="User, Information , SIgnIn,Design, Software, App, Application, Responsive, Mobile First, Web , Ireland, HTML, CSS, JavaScript, Bootstrap, C#, .Net, React, API ,Agile">
+    <meta name="author" content="Stephen Meehan">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>User Details | WebFrame</title>
+    <link rel="icon" type="image/png" href="images/logoDark.png" >
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logoDark.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            WebFrame
+          </a>
+          <div class="collapse navbar-collapse" id="collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+             
+             
+              
+            </ul>
+            <div class="d-inline-block align-text-top cartDiv">
+
+              <ul class ="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                <li class="nav-item">
+                  <a class="nav-link loginButton" href="login.html">Login</a>
+                </li>
+                
+              <li>
+                <a href="userdetails.html" id = "userDetails">
+                  <button type="button" class="btn btn-outline-light btn-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+                    </svg>
+                  </button>
+                </a>
+                </li>
+                </ul>
+                </div>
+          </div>
+        </div>
+      </nav>
+<div class = "regBackground">
+  <div class = "regContainer">
+      <div class="row ">    
+        <div class="col-sm col-md-4 reg"> 
+            <form name="userdetails" id="udetails" action="" method="get" onsubmit="SaveDetails()">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <div class="form-group">
+                        <label for="getFirstName">First name</label>
+                        <input type="text" class="form-control" id="firstNameID" name="firstname" required onkeydown="return false;">
+                    </div>
+                    <div class="form-group">
+                        <label for="getLastName">Last name</label> 
+                        <input type="text" class="form-control" id="lastNameID" name="lastname" required  onkeydown="return false;">
+                    </div>
+                      
+                    <div class="form-group">
+                        <label for="getDOB">Date of Birth</label> 
+                        <input type="date" class="form-control" id="dobID" name="dob" required onkeydown="return false;">
+                    </div>  
+                </fieldset>    
+                
+                <fieldset>
+                    <legend>Address</legend>
+                    <div class="form-group">
+                        <label for="address1ID">Address 1</label> 
+                        <input type="text" class="form-control" id="address1ID" name="address1" required>
+                    </div>   
+                    <div class="form-group">
+                        <label for="address2ID">Address 2</label> 
+                        <input type="text" class="form-control" id="address2ID" name="address2" required>
+                    </div>  
+                    <div class="form-group">
+                        <label for="address3ID">Address 3</label> 
+                        <input type="text" class="form-control" id="address3ID" name="address3" required>
+                    </div>  
+                </fieldset>   
+                <fieldset>
+                  <legend>Email</legend>
+                  <fieldset>
+                    <div class="form-group">
+                      <label for="emailAddressID">Email address</label>
+                      <input type="email" class="form-control" id="emailAddressID" name="email" value="johndoe@email.com" required onkeydown="return false;">
+                  </div>
+                  
+              </fieldset> 
+                <div class="mt-3 form-group regButton">
+                    <input type='submit' class="btn btn-outline-light btn-lg" id = "submit" value="Return">
+                </div>
+            </form>
+
+
+        </div> 
+    </div>   
+  </div>
+  </div>
+
+      <footer id="footer" class="footer-1">
+        <div class = "footerContent d-flex justify-content-center" >
+          <div class="main-footer widgets-dark typo-light">
+           <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget subscribe no-box">
+                      <div class="navbar-brand" >
+                          <img src="images/logoDark.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                          WebFrame
+                      </div>
+                    <p>Better People, Better Websites</p>
+                    </div>
+              </div>
+        
+          
+        <div class="col-xs-12 col-sm-6 col-md-3" style="text-align: left;">
+          <div class="widget no-box">
+            <h5 class="widget-title" >&ensp;&ensp;Quick Links<span></span></h5>
+            <ul class=" footerList">
+            <li class = "underLine">
+            <div ><a href="register.html">Register</a></div> 
+            </li>
+            <li class = "underLine">
+            <div><a href="shop.html">Shop</a></div> 
+            </li>
+            <li class = "underLine">
+              <div><a href="about.html">About Us</a></div> 
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="widget no-box">
+        <h5 class="widget-title">Contact Us<span></span></h5>
+                    <p>If you wish to contact us about potential work, a job or a order you have placed, please fill out our form and we will get back to you.</p>
+                    <a href="contact.html"><button type="button" class="btn btn-outline-light btn-sm">Contact</button></a>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+          
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12 text-center">
+            <p>Copyright WebFrame ltd. &copy; 2021. All rights reserved.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="customJs/userDetails.js"></script>
+    <script src="customJs/loginBackEnd.js"></script>
+</body>
+</html>

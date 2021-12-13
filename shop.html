@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="In our store at WebFrame, you can contact us about any design needs you have, we also sell a selection of branded merchandise, Very high quality and sold at competitive prices.">
+    <meta name="keywords" content="Shop, Shopping Cart, Christmas, Birthday, Sale, Discount, Jumpers, Coffee Cups, Bluetooth Speakers, Water Bottles, Headphones, Over Ear, Desk Pad, Thumb Drive, USB 3.0, 
+     Beanie, Present, Gift, Nerd, Bargin, Design, Software, App, Application, Responsive, Mobile First, Web , Ireland, HTML, CSS, JavaScript, Bootstrap, C#, .Net, React, API ,Agile">
+    <meta name="author" content="Stephen Meehan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" type="image/png" href="images/logoDark.png" >
+    
+   
+    <title>Shop our Branded Merch and Tech Products Today | WebFrame</title>
+</head>
+<body >
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logoDark.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            WebFrame
+          </a>
+          <div class="collapse navbar-collapse" id="collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              
+            </ul>
+            
+          </div>
+
+          <div class="d-inline-block align-text-top cartDiv">
+
+            <ul class ="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item">
+                <a class="nav-link loginButton" href="login.html">Login</a>
+              </li>
+              
+            <li>
+              <a href="userdetails.html" id = "userDetails">
+                <button type="button" class="btn btn-outline-light btn-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+                  </svg>
+                </button>
+              </a>
+            </li>
+              <li class = "cartBtn">
+                <button class="btn btn-outline-light btn-lg cartBtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg>
+                  </button>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+       
+      </nav>
+
+      <div class="shoppingCart" >
+        <h3>Cart</h3>
+
+        <div id = "shoppingBasket">
+
+        </div>
+
+        <div class = "total">
+          <p id = "noItem">You have no items in your cart</p>
+          <a href="checkout.html" id = "checkOut">
+          <button class="btn btn-primary checkOut">Check Out</button>
+          </a>
+          
+          
+          <p id = "totalPrice">Total: <span id = "price"></span></p>
+        </div>
+      </div>
+      
+
+      <div> 
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/car1.jpg" class="d-block w-100" alt="Mobile Phone, at computer workstation, dark background">
+            </div>
+            <div class="carousel-item">
+              <img src="images/car2.jpg" class="d-block w-100" alt="Person designing on paper with pen">
+            </div>
+            <div class="carousel-item">
+              <img src="images/car3.jpg" class="d-block w-100" alt="Code on dark screen">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        
+
+        <div class = "shopBanner d-flex flex-column"> 
+          <h2 class = "p-2">Welcome to our Shop</h2>
+          <p class = "p-2">Here you can enquire about the design services we provide as well as purchase our branded merchandise</p>
+        </div>
+      </div>
+    
+      
+    
+    
+      <div class = "services row">
+       
+         <section class = "shopContainer row seviceBox justify-content-center ">
+          <h2 class = "reviewHeading serviceHeading" >Our Design Services!</h2>
+            <div class = "col serviceContain">
+              <img src="assets/webdesign.jpg" alt="webdesign image, laptop, dark background" class = "serviceImage">
+              <p class = "lightBox">Web-Design</p>
+            </div>
+            <div class = "col serviceContain">
+              <img src="assets/softwaredesign.jpg" alt="Software-designImage, glasses Computer" class = "serviceImage">
+              <p class = "lightBox">Software-Design</p>
+
+            </div>
+            <div class = "col serviceContain">
+            <img src="assets/appdesign.jpg" alt="app design, mobile " class = "serviceImage">
+            <p class = "lightBox">App-Design</p>
+            </div>
+            <div class = "serviceText highlightBorder">
+              <h3 class = "reviewHeading">Design is our Passion!</h3>
+             <div class = "serviceTextContain">
+              <p>Our in house web/software development team are skilled at creating custom branded websites, software and applications, putting functionality first</p>
+              <p> Stand out from the crowd with a customer design, to showcase your brand and connect with your audience </p>
+              <p>Fill out the contact form , detailing your idea and we can begin your design journey with WebFrame</p>
+            </div>
+            <a href="contact.html">
+              <button class="btn btn-outline-light btn-lg "  type="button">Contact Us</button>
+            </a>
+            </div>
+       </section>
+      
+</div>
+      <div>
+        <div class = "shopContainer row justify-content-center">
+        <h1 class = "centered reviewHeading">Our Merch!</h1>
+        <div class = "promoAdd">
+          <h6>Enter 'Promo10' at checkout for 10% off!</h6>
+        </div>
+              <div class = "shopItem highlightBorder col d-flex flex-column "> 
+                <img src="assets/shopItems/mousePad.jpg" alt="Mouse Pad shop Item" class = "itemPic zoom p-2">
+      
+                <div class = "shopitemText p-2"> 
+                  <h6 class = "centered itemName p-2">Black Desk pad</h6>
+                  <p class = "shopReview p-2">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color: black;">(52 reviews)</span></p>
+                  <p class = "itemPrice p-2">€29.50</p>
+                  <button class="btn btn-outline-success buyNow " type="button">Buy Now</button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover"  data-bs-placement="top" title="Black Desk pad" data-bs-content="Large black desk pad, made of high-quality durable material.">Description</button>
+                </div>
+                </div>
+
+              <div class = "shopItem highlightBorder col d-flex flex-column"> 
+                <img src="assets/shopItems/beanie.jpg" alt="Beanie hat shop item" class = "itemPic zoom p-2">
+                <div class = "shopitemText p-2"> 
+                  <h6 class = "centered itemName p-2">Beanie</h6>
+                  <p class = "shopReview p-2">&#9733;&#9733;&#9733;&#9733; <span style="color: black;">(12 reviews)</span></p>
+                  <p class = "itemPrice p-2">€13.99</p>
+                  <button class="btn btn-outline-success buyNow" type="button">Buy Now</button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover"  data-bs-placement="top" title="Beanie" data-bs-content="Black branded beanie, stylist and comfortable.">Description</button>
+                </div>
+              </div>
+
+              <div class = "shopItem highlightBorder col d-flex flex-column"> 
+                <img src="assets/shopItems/cofeeCup.jpg" alt="Coffee cup shop item" class = "itemPic zoom p-2">
+                <div class = "shopitemText p-2"> 
+                  <h6 class = "centered itemName p-2">Insulated Coffee Cup</h6>
+                  <p class = "shopReview p-2">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color: black;">(102 reviews)</span></p>
+                  <p class = "itemPrice p-2">€19.99</p>
+                  <button class="btn btn-outline-success buyNow" type="button">Buy Now</button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover"  data-bs-placement="top" title="Insulated Coffee Cup" data-bs-content="Branded white coffee cup, insulated body will keep drinks hot for 6 hours.">Description</button>
+                </div>
+              </div>
+           
+              <div class = "shopItem highlightBorder col d-flex flex-column"> 
+                <img src="assets/shopItems/thumbDrive.png" alt="thumb Drive shop Item" class = "itemPic zoom p-2">
+                <div class = "shopitemText p-2"> 
+                  <h6 class = "centered itemName p-2">8Gb Thumb-Drive</h6>
+                  <p class = "shopReview p-2">&#9733;&#9733;&#9733; <span style="color: black;">(9 reviews)</span></p>
+                  <p class = "itemPrice p-2">€9.99</p>
+                  <button class="btn btn-outline-success buyNow" type="button">Buy Now</button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover"  data-bs-placement="top" title="8Gb Thumb-Drive" data-bs-content="Coloured Thumb drive, using USB 3.0 for fast read and write speeds.">Description</button>
+                </div>
+              </div>
+              <div class = "shopItem highlightBorder col d-flex flex-column"> 
+                <img src="assets/shopItems/speakers.jpg" alt="Speakers Shop Item" class = "itemPic zoom p-2">
+                <div class = "shopitemText p-2"> 
+                  <h6 class = "centered itemName p-2">Bluetooth Speakers</h6>
+                  <p class = "shopReview p-2">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color: black;">(149 reviews)</span></p>
+                  <p class = "itemPrice p-2">€24.99</p>
+                  <button class="btn btn-outline-success buyNow" type="button">Buy Now</button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover"  data-bs-placement="top" title="Bluetooth Speakers" data-bs-content="Powerful Bluetooth speaker, with 8-hour battery life. ">Description</button>
+                 
+                </div>
+                </div>
+                
+              
+              <div class = "shopItem highlightBorder col d-flex flex-column"> 
+                <img src="assets/shopItems/CPU_Pillow.png" alt="CPU pillow shop item" class = "itemPic zoom p-2">
+                <div class = "shopitemText p-2"> 
+                  <h6 class = "centered itemName p-2">CPU Pillow</h6>
+                  <p class = "shopReview p-2">&#9733;&#9733;&#9733;&#9733; <span style="color: black;">(32 reviews)</span></p>
+                  <p class = "itemPrice p-2">€29.99</p>
+                  <button class="btn btn-outline-success buyNow" type="button">Buy Now</button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover"  data-bs-placement="top" title="CPU Pillow" data-bs-content="50cm X 50cm soft CPU pillow, perfect gift for someone who loves computers as much as we do!">Description</button>
+                </div>
+                </div>
+
+                <div class = "shopItem highlightBorder col d-flex flex-column"> 
+                  <img src="assets/shopItems/headphones.jpg" alt="HeadPhones Shop item" class = "itemPic zoom p-2">
+                  <div class = "shopitemText p-2"> 
+                    <h6 class = "centered itemName p-2">Over-ear Headphones</h6>
+                    <p class = "shopReview p-2">&#9733;&#9733;&#9733; <span style="color: black;">(16 reviews)</span></p>
+                    <p class = "itemPrice p-2">€39.99</p>
+                    <button class="btn btn-outline-success buyNow" type="button">Buy Now</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover"  data-bs-placement="top" title="Over-ear Headphones" data-bs-content="High quality over ear wireless headphones, 16-hour battery life for music on the go. ">Description</button>
+                  </div>
+                </div>
+                <div class = "shopItem highlightBorder col d-flex flex-column"> 
+                  <img src="assets/shopItems/waterBottle.jpg" alt="waterBottle Shop Item" class = "itemPic zoom p-2">
+                  <div class = "shopitemText p-2"> 
+                    <h6 class = "centered itemName p-2">Water Bottle</h6>
+                    <p class = "shopReview p-2">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color: black;">(109 reviews)</span></p>
+                    <p class = "itemPrice p-2">€15.00</p>
+                    <button class="btn btn-outline-success buyNow" type="button">Buy Now</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover"  data-bs-placement="top" title="Water Bottle" data-bs-content="Insulated 500ml water bottle, keeps drinks cold for 9-hours, you never need to buy bottled water again! ">Description</button>
+                   
+                  </div>
+                  </div>
+                  
+                
+                <div class = "shopItem highlightBorder col d-flex flex-column"> 
+                  <img src="assets/shopItems/jumper.jpg" alt="jumper shop Item" class = "itemPic zoom p-2">
+                  <div class = "shopitemText p-2"> 
+                    <h6 class = "centered itemName p-2">Branded Jumper</h6>
+                    <p class = "shopReview p-2">&#9733;&#9733;&#9733;&#9733; <span style="color: black;">(13 reviews)</span></p>
+                    <p class = "itemPrice p-2">€19.99</p>
+                    <button class="btn btn-outline-success buyNow" type="button">Buy Now</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover"  data-bs-placement="top" title="Branded Jumper" data-bs-content="Black branded Jumper, crew neck, standard fit.">Description</button>
+                  </div>
+                  </div>
+             
+              </div>
+       </div>
+       
+         
+          
+       <footer id="footer" class="footer-1">
+        <div class = "footerContent d-flex justify-content-center" >
+          <div class="main-footer widgets-dark typo-light">
+           <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget subscribe no-box">
+                      <div class="navbar-brand" >
+                          <img src="images/logoDark.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                          WebFrame
+                      </div>
+                    <p>Better People, Better Websites</p>
+                    </div>
+              </div>
+        
+          
+        <div class="col-xs-12 col-sm-6 col-md-3" style="text-align: left;">
+          <div class="widget no-box">
+            <h5 class="widget-title" >&ensp;&ensp;Quick Links<span></span></h5>
+            <ul class=" footerList">
+            <li class = "underLine">
+            <div ><a href="register.html">Register</a></div> 
+            </li>
+            <li class = "underLine">
+            <div><a href="shop.html">Shop</a></div> 
+            </li>
+            <li class = "underLine">
+              <div><a href="about.html">About Us</a></div> 
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="widget no-box">
+        <h5 class="widget-title">Contact Us<span></span></h5>
+                    <p>If you wish to contact us about potential work, a job or a order you have placed, please fill out our form and we will get back to you.</p>
+                    <a href="contact.html"><button type="button" class="btn btn-outline-light btn-sm">Contact</button></a>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+          
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12 text-center">
+            <p>Copyright WebFrame ltd. &copy; 2021. All rights reserved.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="customJs/shop.js"></script>
+    <script src="customJs/loginBackEnd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+
+</body>
+
+
+</html>

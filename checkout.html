@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="WebFrame is a web and software design company based in the west of Ireland, using up to date industry standards and with a mobile first design philosophy we are are one stop shop for all your design needs">
+    <meta name="keywords" content="Products, Shop, Merch, Checkout, Design, Software, App, Application, Responsive, Mobile First, Web , Ireland, HTML, CSS, JavaScript, Bootstrap, C#, .Net, React, API ,Agile">
+    <meta name="author" content="Stephen Meehan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Checkout From Store | WebFrame</title>
+    <link rel="icon" type="image/png" href="images/logoDark.png" >
+</head>
+<body id = "body">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logoDark.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            WebFrame
+          </a>
+          <div class="collapse navbar-collapse" id="collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+             
+            </ul>
+            <div class="d-inline-block align-text-top cartDiv">
+
+              <ul class ="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                <li class="nav-item">
+                  <a class="nav-link loginButton" href="login.html">Login</a>
+                </li>
+                
+              <li>
+                <a href="userdetails.html" id = "userDetails">
+                  <button type="button" class="btn btn-outline-light btn-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+                    </svg>
+                  </button>
+                </a>
+              </li>
+                <li class = "cartBtn">
+                  <button class="btn btn-outline-light btn-lg cartBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    </button>
+                </li>
+  
+              </ul>
+            </div>
+        </div>
+
+       
+      </nav>
+
+   
+     
+<div class = "checkBackground">
+ 
+      <div class = "checkContainer split">
+        
+          <div class = "checkForm">
+            <h3 class = "totalClass">Customer Details</h3>
+            <div class = "details">
+              <p id = "name"></p>
+              <p id = "address" ></p>
+             
+            </div>
+           
+            <div class="col-md-3 mb-6">
+              <label for="Promo-Code">Promo Code</label>
+              <input type="text" class="form-control" id="promoCode" placeholder="" required >
+              <button class = "btn btn-outline-light btn-sm" id = "promoBtn" style="margin-top: 10%;">Enter</button>
+          </div>
+
+              <form name="userDetails"  action="" method="get" onsubmit="ValCard()">
+              <h6 class = "checkHeading">Payment details</h6>
+              <div class="d-block my-3">
+               
+                
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="cc-name">Name on card</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                  <small class="text-muted">Full name as displayed on card</small>
+                  <div class="invalid-feedback">
+                    Name on card is required
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="cc-number">Credit card number</label>
+                  <input type="text" class="form-control" id="cc-number cc-number" placeholder="" pattern="[0-9]{16}"  title = "The credit card number must be 16 digits" required>
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 mb-3">
+                  <label for="cc-expiration">Expiration</label>
+                  <input type="text" class="form-control cc-exp" id="cc-expiration" pattern = "^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" title="Must be format M/Y eg. 01/22" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="cc-cvv">CVV</label>
+                  <input type="text" class="form-control cc-cvc" id="cc-cvv" pattern="[0-9]{3}" title = "CVV must be three digits" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+              <hr class="mb-4">
+              <button class="btn btn-outline-light btn-lg  btn-block" type="submit" id = "checkOut">Checkout</button>
+            </form>
+        
+             
+          </div>
+            <div id = "cartCheck">
+                <h3 class = "totalClass">Your Cart</h3>
+
+                <div id = "cart">
+
+                </div>
+
+                <div id = "total">
+                  <p id = "totalPrice">Total: <span id = "price"></span></p>
+                </div>
+                
+
+          </div>
+          
+        
+      </div>
+    </div>
+
+      <footer id="footer" class="footer-1">
+        <div class = "footerContent d-flex justify-content-center" >
+          <div class="main-footer widgets-dark typo-light">
+           <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget subscribe no-box">
+                      <div class="navbar-brand" >
+                          <img src="images/logoDark.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                          WebFrame
+                      </div>
+                    <p>Better People, Better Websites</p>
+                    </div>
+              </div>
+        
+          
+        <div class="col-xs-12 col-sm-6 col-md-3" style="text-align: left;">
+          <div class="widget no-box">
+            <h5 class="widget-title" >&ensp;&ensp;Quick Links<span></span></h5>
+            <ul class=" footerList">
+            <li class = "underLine">
+            <div ><a href="register.html">Register</a></div> 
+            </li>
+            <li class = "underLine">
+            <div><a href="shop.html">Shop</a></div> 
+            </li>
+            <li class = "underLine">
+              <div><a href="about.html">About Us</a></div> 
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="widget no-box">
+        <h5 class="widget-title">Contact Us<span></span></h5>
+                    <p>If you wish to contact us about potential work, a job or a order you have placed, please fill out our form and we will get back to you.</p>
+                    <a href="contact.html"><button type="button" class="btn btn-outline-light btn-sm">Contact</button></a>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+          
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12 text-center">
+            <p>Copyright WebFrame ltd. &copy; 2021. All rights reserved.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+     
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+
+    
+    <script src="customJs/checkout.js"></script>
+    <script src="customJs/loginBackEnd.js"></script>
+</body>
+</html>

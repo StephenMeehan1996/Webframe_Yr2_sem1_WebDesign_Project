@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="WebFrame is a web and software design company based in the west of Ireland, using up to date industry standards and with a mobile first design philosophy we are are one stop shop for all your design needs">
+    <meta name="keywords" content="Design, Software, App, Application, Responsive, Mobile First, Web , Ireland, HTML, CSS, JavaScript, Bootstrap, C#, .Net, React, API ,Agile">
+    <meta name="author" content="Stephen Meehan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>WebFrame: Irish Web/Software Design Company & Online Store</title>
+    <link rel="icon" type="image/png" href="images/logoDark.png" >
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logoDark.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            WebFrame
+          </a>
+          <div class="collapse navbar-collapse" id="collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+             >
+             
+              
+            </ul>
+            <div class="d-inline-block align-text-top cartDiv">
+
+              <ul class ="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                <li class="nav-item">
+                  <a class="nav-link loginButton"  href="login.html">Login</a>
+                </li>
+                
+              <li>
+                <a href="userdetails.html" id = "userDetails">
+                <button type="button" class="btn btn-outline-light btn-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+                  </svg>
+                </button>
+              </a>
+                </li>
+                </ul>
+                </div>
+          </div>
+        </div>
+      </nav>
+
+      
+
+      <div class = "banner"> 
+        <img src="images/BannerTopB.png" class="img-fluid" alt="workLaptop">
+          <div class  = "bannerText">
+            <h4>Life's too short for poor Design!</h4>
+            <p >With WebFrame, we can design great </p>
+            <p id = "targetText" >Placeholder</p>
+            <p>Since 2020, we have assisted our customers in achieving their design goals</p>
+          </div>
+      </div>
+
+      
+
+      
+      <div id="carousel" class="carousel slide container-fluid " data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner ">
+          <div class="carousel-item active ">
+            <img src="assets/clearLightBulb.jpg" class="d-block w-100" alt="Clear Idea LightBulb">
+            <div class="carousel-caption d-none d-md-block shaded">
+              <h3>Supporting Your Ideas</h3>
+              <p>We believe in your ideas and will help you develop and bring them on to the next stage.</p>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <img src="assets/Mobilehand.jpg" class="d-block w-100" alt="Mobile Phone, Held in hand">
+            <div class="carousel-caption d-none d-md-block shaded">
+              <h3>Mobile First Responsive Design</h3>
+              <p>With more and more content being consumed on a mobile device, mobile first design will give you the edge on your competition.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/Creative.jpg" class="d-block w-100" alt="Be creative, written on white paper">
+            <div class="carousel-caption d-none d-md-block shaded">
+              <h3>Creative Agile driven Workflow</h3>
+              <p>Our design process is built around the customer, ever changing and responding to the changing needs and desires of our users.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+   
+
+
+
+      <section class = "vison">
+        <div class = "justify-content-center">
+        <h2 class="centered">Better People, Better Websites</h2>
+        <div class = "aboutUs row ">
+           <div class = "visonText col space ">
+             <h3 class = "centered">Our Vison</h3>
+            <p class = "indexText">At WebFrame we live for design and creativity, we are a mobile first design company, we believe A responsive design is centered around your customer’s experience on the site. </p>
+            <p class = "indexText">Developing a responsive site improves the way your site or application looks on devices with both large and small screens and increase the amount of time that visitors spend on your site. Responsive web design helps increase visibility on search engines, which in turn can mean more visitors to your website.</p>
+               
+           </div>
+           <div class = "col tm-about-1">
+             <img src="images/computerWindow.jpg" alt="laptop with window background" class="img-fluid mb-5">
+          </div>
+
+        </div>
+        <div class = "aboutUs row">
+          <div class = "col tm-about-1">
+            <img src="images/keyHand.jpg"  alt="KeyBoard , with hand typing" class="img-fluid mb-5">
+          </div>
+          <div class = "visonText col">
+            <h3 class = "centered">Our Approach</h3>
+            <p class = "indexText">When our team takes on web design, we always ensure that we create an end solution that meets – and exceeds – all expectations. We don’t do things by half, we’ll craft for you bespoke, responsive web design and development services to place your results first.</p>
+            <p class = "indexText">When you display content on your site it is targeted towards your ideal customer and what they might care about. If the content is relevant to them then they’ll share it and revisit it. These key actions benefit your business by generating new leads, raising brand awareness, and nurturing existing customers</p>
+
+         </div>
+       </div>
+      </div>
+      </section>
+
+
+    
+      <div class = "container  reviewContainer"> 
+        <div class = "row justify-content-center">
+
+        <h3 class = "reviewHeading" >Dont believe us, listen to our customers</h3>
+        
+       
+          <div class = " col  review ">
+            <div class = "d-flex flex-column">
+            <img src="assets/profile/man1b.jpg" class = "p-2"  alt="Customer Review Profile">
+            <p class = "p-2" >Dave Matthews</p>
+            <p class = "p-2 stars"  >&#9733;&#9733;&#9733;&#9733;</p>
+            <p class = "p-2"  >"Their service far outweighs that of anybody I’ve ever worked with."</p>
+          </div>
+        </div>
+        
+          <div class = "col review">
+            <div class = "d-flex flex-column">
+            <img src="assets/profile/woman1.jpg" class = "p-2" alt="Customer Review Profile">
+            <p class = "p-2"  >Jenny Duffy</p>
+            <p class = "p-2 stars" >&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class = "p-2" >"No matter what challenge we throw at WEB FRAME, they figure out a way to make it happen."</p>
+          </div>
+        </div>
+        
+          
+          <div class = "col review">
+            <div class = "d-flex flex-column">
+            <img src="assets/profile/man2.jpg" class = "p-2"  alt="Customer Review Profile">
+            <p class = "p-2"  >Frank Clarke</p>
+            <p class = "p-2 stars"  >&#9733;&#9733;&#9733;&#9733;</p>
+            <p class = "p-2" >"We’ve established a solid, professional relationship, and I’m happy with their work."</p>
+          </div>
+          
+        </div>
+         
+          <div class = "col  review">
+            <div class = "d-flex flex-column">
+            <img src="assets/profile/woman2.jpg" class="p-2" alt="Customer Review Profile">
+            <p class = "p-2">Mary O'Connor</p>
+            <p class = "p-2 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class = "p-2">“They oriented themselves toward what our goal was.”</p>
+          </div>
+          
+        </div>
+        </div>
+        
+        </div>
+       
+
+        <footer id="footer" class="footer-1">
+          <div class = "footerContent d-flex justify-content-center" >
+            <div class="main-footer widgets-dark typo-light">
+             <div class="container">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                      <div class="widget subscribe no-box">
+                        <div class="navbar-brand" >
+                            <img src="images/logoDark.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                            WebFrame
+                        </div>
+                      <p>Better People, Better Websites</p>
+                      </div>
+                </div>
+          
+            
+          <div class="col-xs-12 col-sm-6 col-md-3" style="text-align: left;">
+            <div class="widget no-box">
+              <h5 class="widget-title" >&ensp;&ensp;Quick Links<span></span></h5>
+              <ul class=" footerList">
+              <li class = "underLine">
+              <div ><a href="register.html">Register</a></div> 
+              </li>
+              <li class = "underLine">
+              <div><a href="shop.html">Shop</a></div> 
+              </li>
+              <li class = "underLine">
+                <div><a href="about.html">About Us</a></div> 
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="widget no-box">
+          <h5 class="widget-title">Contact Us<span></span></h5>
+                      <p>If you wish to contact us about potential work, a job or a order you have placed, please fill out our form and we will get back to you.</p>
+                      <a href="contact.html"><button type="button" class="btn btn-outline-light btn-sm">Contact</button></a>
+          </div>
+          
+          </div>
+          </div>
+          </div>
+            
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <div class="container">
+              <div class="row">
+              <div class="col-md-12 text-center">
+              <p>Copyright WebFrame ltd. &copy; 2021. All rights reserved.</p>
+              </div>
+              </div>
+            </div>
+          </div>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="customJs/index.js"></script>
+    <script src="customJs/loginBackEnd.js"></script>
+</body>
+</html>
