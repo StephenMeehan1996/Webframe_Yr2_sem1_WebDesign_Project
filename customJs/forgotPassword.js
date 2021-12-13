@@ -8,8 +8,13 @@
 
 
 
-// code not working, local storage not responding to change in password// 
 
+function returnHome(){
+    event.preventDefault();
+    window.location.href = "index.html"; // code just sends user home// 
+}
+
+// code not working, local storage not responding to change in password// 
 function ForgotPassword()
 {
  alert('test');
